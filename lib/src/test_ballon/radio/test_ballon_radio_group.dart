@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:ploogin_chat/src/radio_test_ballon/radio_group_button_builder.dart';
+import 'package:ploogin_chat/src/test_ballon/radio/test_ballon_radio_option.dart';
 
-class RadioGroupButton extends StatefulWidget {
+class TestBallonRadioGroup extends StatefulWidget {
   final ValueChanged<RadioOptions> onChanged;
 
-  const RadioGroupButton({Key? key, required this.onChanged}) : super(key: key);
+  const TestBallonRadioGroup({Key? key, required this.onChanged}) : super(key: key);
 
   @override
-  _RadioGroupButtonState createState() => _RadioGroupButtonState();
+  _TestBallonRadioGroupState createState() => _TestBallonRadioGroupState();
 }
 
-class _RadioGroupButtonState extends State<RadioGroupButton> {
+class _TestBallonRadioGroupState extends State<TestBallonRadioGroup> {
   RadioOptions _radioValue = RadioOptions.option1;
 
   @override

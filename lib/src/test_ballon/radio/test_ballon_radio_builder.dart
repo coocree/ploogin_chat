@@ -1,28 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:ploogin_chat/src/test_ballon/radio/test_ballon_radio_option.dart';
 
-enum RadioOptions { option1, option2, option3 }
-// Classe que define a configuração de cada opção do botão de rádio
-class RadioOptionConfig {
-  final String label; // Rótulo exibido junto à opção de rádio
-  final dynamic value; // Valor associado a essa opção de rádio
 
-  RadioOptionConfig({required this.label, required this.value});
-}
 
 // StatefulWidget para construir o grupo de botões de rádio
-class RadioGroupButtonBuilder extends StatefulWidget {
-  final List<RadioOptionConfig> options; // Lista de opções a serem exibidas
+class TestBallonRadioBuilder extends StatefulWidget {
+  final List<TestBallonRadioOption> options; // Lista de opções a serem exibidas
   final ValueChanged<dynamic> onChanged; // Função chamada quando o valor selecionado é alterado
   final dynamic rightAnswer; // Valor correto da resposta
 
-  const RadioGroupButtonBuilder({Key? key, required this.options, required this.onChanged, required this.rightAnswer}) : super(key: key);
+  const TestBallonRadioBuilder({Key? key, required this.options, required this.onChanged, required this.rightAnswer}) : super(key: key);
 
   @override
-  _RadioGroupButtonBuilderState createState() => _RadioGroupButtonBuilderState();
+  _TestBallonRadioBuilderState createState() => _TestBallonRadioBuilderState();
 }
 
 // State para gerenciar o estado interno do grupo de botões de rádio
-class _RadioGroupButtonBuilderState extends State<RadioGroupButtonBuilder> {
+class _TestBallonRadioBuilderState extends State<TestBallonRadioBuilder> {
   dynamic _radioValue; // Valor atualmente selecionado
 
   @override

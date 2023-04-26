@@ -27,17 +27,31 @@ class ExamplePage extends StatefulWidget {
 class _ExamplePageState extends State<ExamplePage> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: const [
-            RadioTestBallon(),
-            SizedBox(height: 20,),
-            TextLeftBallon("Maecenas aliquam enim at sapien convallis, non lobortis neque molestie. Vivamus dictum tortor metus, id gravida dui faucibus ac. Donec at bibendum urna."),
-          ],
+    return Scaffold(
+      body: Center(
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          constraints: const BoxConstraints(maxWidth: 1024),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children:  [
+             // TestBallonRadio(),
+              SizedBox(
+                height: 20,
+              ),
+              TextBallonLeft(
+                  "Maecenas aliquam enim at sapien convallis, non lobortis neque molestie. Vivamus dictum tortor metus, id gravida dui faucibus ac. Donec at bibendum urna."),
+              SizedBox(height: 10),
+              TextBallonLeft("Donec at bibendum urna."),
+              SizedBox(height: 10),
+              TextBallonLeft("Vivamus dictum tortor metus, id gravida dui faucibus ac. Donec at bibendum urna."),
+              SizedBox(height: 10),
+              //VideoBallon("Vivamus dictum tortor metus, id gravida dui faucibus ac. Donec at bibendum urna."),
+              //SizedBox(height: 10),
+              TextBallonRight("Maecenas aliquam enim at sapien convallis, non lobortis neque molestie. Vivamus dictum tortor metus, id gravida dui faucibus ac. Donec at bibendum urna."),
+            ],
+          ),
         ),
       ),
     );
