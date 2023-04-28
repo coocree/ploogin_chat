@@ -13,6 +13,9 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
+  font_awesome_flutter:
+    path: packages/font_awesome_flutter
+
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
